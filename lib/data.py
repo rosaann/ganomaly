@@ -182,6 +182,7 @@ def get_cifar_anomaly_dataset(trn_img, trn_lbl, tst_img, tst_lbl, abn_cls_idx=0,
     # --
     # Find idx, img, lbl for abnormal and normal on org dataset.
     nrm_trn_idx = np.where(trn_lbl != abn_cls_idx)[0]
+    print(nrm_trn_idx)
     abn_trn_idx = np.where(trn_lbl == abn_cls_idx)[0]
     nrm_trn_img = trn_img[nrm_trn_idx]    # Normal training images
     abn_trn_img = trn_img[abn_trn_idx]    # Abnormal training images
