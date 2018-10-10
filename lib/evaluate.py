@@ -60,7 +60,9 @@ def roc(labels, scores, saveto='./output'):
         plt.ylabel('True Positive Rate')
         plt.title('Receiver operating characteristic')
         plt.legend(loc="lower right")
-        plt.savefig(os.path.join(saveto, "ROC.pdf"))
+        address = os.path.join(saveto, "ROC.pdf")
+        print("***: {}".format(address))
+        plt.savefig(address)
         plt.close()
 
     return roc_auc
