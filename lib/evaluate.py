@@ -14,7 +14,9 @@ import os
 from sklearn.metrics import roc_curve, auc, average_precision_score, f1_score
 from scipy.optimize import brentq
 from scipy.interpolate import interp1d
+
 import matplotlib.pyplot as plt
+plt.switch_backend('agg')
 from matplotlib import rc
 rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
 rc('text', usetex=True)
